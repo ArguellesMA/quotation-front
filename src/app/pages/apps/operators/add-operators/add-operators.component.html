@@ -1,0 +1,149 @@
+<!--<form (ngSubmit)="save()" [formGroup]="form">-->
+    <form class="needs-validation" [formGroup]="form" novalidate (ngSubmit)="save(form.value)">
+        <div fxLayout="row" fxLayoutAlign="start center" mat-dialog-title>
+          
+      
+          <h2 *ngIf="form.get('apellidos').value || form.get('nombre').value"
+              class="headline m-0"
+              fxFlex="auto">{{ form.get('apellidos').value + ' ' + form.get('nombre').value }}</h2>
+          <h2 *ngIf="!form.get('apellidos').value && !form.get('nombre').value"
+              class="headline m-0"
+              fxFlex="auto">Nueva operador</h2>
+
+      
+          <button [matMenuTriggerFor]="settingsMenu" class="text-secondary" mat-icon-button type="button">
+            <mat-icon [icIcon]="icMoreVert"></mat-icon>
+          </button>
+      
+          <button class="text-secondary" mat-dialog-close mat-icon-button type="button">
+            <mat-icon [icIcon]="icClose"></mat-icon>
+          </button>
+        </div>
+      
+        <mat-divider class="-mx-6 text-border"></mat-divider>
+      
+        <mat-dialog-content fxLayout="column">
+          <div class="flex flex-col sm:flex-row">
+            <mat-form-field class="mt-6 flex-auto">
+              <mat-label>Nombre</mat-label>
+              <!--<input cdkFocusInitial formControlName="firstName" matInput>-->
+              <input cdkFocusInitial formControlName="nombre" type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="addOperators.nombre" matInput>
+      
+              <!--<mat-icon [icIcon]="icPerson" class="mr-3" matPrefix></mat-icon>-->
+            </mat-form-field>
+      
+            <mat-form-field class="sm:mt-6 sm:ml-6 flex-auto">
+              <mat-label>Apellidos</mat-label>
+              <!--<input cdkFocusInitial formControlName="lastName" matInput>-->
+              <input  formControlName="apellidos" type="text" class="form-control" id="apellidos" name="apellidos" [(ngModel)]="addOperators.apellidos" matInput>
+      
+              <!--<mat-icon [icIcon]="icPerson" class="mr-3" matPrefix></mat-icon>-->
+            </mat-form-field>
+          </div>
+      
+          <mat-form-field class="flex-auto">
+            <mat-label>Licencia</mat-label>
+            <!--<input formControlName="street" matInput>-->
+            <input  formControlName="licencia" type="text" class="form-control" id="licencia" name="licencia" [(ngModel)]="addOperators.licencia" matInput>
+      
+            <!--<mat-icon [icIcon]="icEditLocation" class="mr-3" matPrefix></mat-icon>-->
+          </mat-form-field>
+      
+          <div class="flex flex-col sm:flex-row">
+            <mat-form-field class="flex-auto">
+              <mat-label>Tipo licencia</mat-label>
+              <!--<input formControlName="zipcode" matInput>-->
+              <input  formControlName="tipoLicencia" type="text" class="form-control" id="tipoLicencia" name="tipoLicencia" [(ngModel)]="addOperators.tipoLicencia" matInput>
+      
+              <!--<mat-icon [icIcon]="icMyLocation" class="mr-3" matPrefix></mat-icon>-->
+            </mat-form-field>
+      
+            <mat-form-field class="sm:ml-6 flex-auto">
+              <mat-label>INE</mat-label>
+              <!--<input formControlName="dia" matInput>-->
+              <input  formControlName="ine" type="text" class="form-control" id="ine" name="ine" [(ngModel)]="addOperators.ine" matInput>
+      
+              <!--<mat-icon [icIcon]="icPerson" class="mr-3" matPrefix></mat-icon>-->
+            </mat-form-field>
+          </div>
+
+          <mat-form-field class="flex-auto">
+            <mat-label>Localidad</mat-label>
+            <!--<input formControlName="phoneNumber" matInput>-->
+            <input  formControlName="localidad" type="text" class="form-control" id="localidad" name="localidad" [(ngModel)]="addOperators.localidad" matInput>
+      
+            <!--<mat-icon [icIcon]="icPhone" class="mr-3" matPrefix></mat-icon>-->
+          </mat-form-field>
+
+          <mat-form-field class="flex-auto">
+            <mat-label>Municipio</mat-label>
+            <!--<input formControlName="phoneNumber" matInput>-->
+            <input  formControlName="municipio" type="text" class="form-control" id="municipio" name="municipio" [(ngModel)]="addOperators.municipio" matInput>
+      
+            <!--<mat-icon [icIcon]="icPhone" class="mr-3" matPrefix></mat-icon>-->
+          </mat-form-field>
+
+          <mat-form-field class="flex-auto">
+            <mat-label>Estado</mat-label>
+            <!--<input formControlName="phoneNumber" matInput>-->
+            <input  formControlName="estado" type="text" class="form-control" id="estado" name="estado" [(ngModel)]="addOperators.estado" matInput>
+      
+            <!--<mat-icon [icIcon]="icPhone" class="mr-3" matPrefix></mat-icon>-->
+          </mat-form-field>
+
+          <hr>
+          <div class="form-group">
+            <h6>Foto del operador</h6>
+            <!--(change)="onUpload($event)"-->
+           <div>
+              <label class="custom-file-upload">
+                <input type="file" accept=".jpeg,.jpg,.png,.svg" (input)="onUpload($event)"/>
+                Seleccionar imagen
+              </label>
+
+              <br>
+              <br>
+              <img [src]="downloadableURL" width="300px" height="300px"/>
+              
+              <div class="progress" *ngIf="uploafPercent">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploafPercent | async)+ '%'">
+                  {{uploafPercent | async}}%
+                </div>
+              </div> 
+
+           
+          </div>
+            <br>
+            <br>
+            <!--<p> URL aqui: {{ downloadableURL }} </p>-->
+     
+            <input #urlimage type="hidden" [value]="downloadableURL">    
+     
+          </div> 
+      
+        </mat-dialog-content>
+      
+        <mat-dialog-actions align="end">
+          <button mat-button mat-dialog-close type="button">CANCELAR</button>
+          <button *ngIf="isCreateMode()" color="primary" mat-button type="submit">CREAR CLIENTE</button>
+          <button *ngIf="isUpdateMode()" color="primary" mat-button type="submit">ACTUALIZAR CLIENTE</button>
+        </mat-dialog-actions>
+      </form>
+      
+      <mat-menu #settingsMenu="matMenu" xPosition="before" yPosition="below">
+        <button mat-menu-item>
+          <mat-icon [icIcon]="icPrint"></mat-icon>
+          <span>Imprimir</span>
+        </button>
+      
+        <button mat-menu-item>
+          <mat-icon [icIcon]="icDownload"></mat-icon>
+          <span>Exportar</span>
+        </button>
+      
+        <button mat-menu-item>
+          <mat-icon [icIcon]="icDelete"></mat-icon>
+          <span>Borrar</span>
+        </button>
+      </mat-menu>
+      

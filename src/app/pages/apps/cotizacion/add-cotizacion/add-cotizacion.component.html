@@ -1,0 +1,106 @@
+<!--<form (ngSubmit)="save()" [formGroup]="form">-->
+  <form class="needs-validation" [formGroup]="form" novalidate (ngSubmit)="save(form.value)">
+    <div fxLayout="row" fxLayoutAlign="start center" mat-dialog-title>
+      
+  
+      <h2 *ngIf="form.get('folioCotizacion').value || form.get('cliente').value"
+          class="headline m-0"
+          fxFlex="auto">{{ form.get('folioCotizacion').value + ' ' + form.get('cliente').value }}</h2>
+      <h2 *ngIf="!form.get('folioCotizacion').value && !form.get('cliente').value"
+          class="headline m-0"
+          fxFlex="auto">Nueva Cotización</h2>
+
+  
+      <button [matMenuTriggerFor]="settingsMenu" class="text-secondary" mat-icon-button type="button">
+        <mat-icon [icIcon]="icMoreVert"></mat-icon>
+      </button>
+  
+      <button class="text-secondary" mat-dialog-close mat-icon-button type="button">
+        <mat-icon [icIcon]="icClose"></mat-icon>
+      </button>
+    </div>
+  
+    <mat-divider class="-mx-6 text-border"></mat-divider>
+  
+    <mat-dialog-content fxLayout="column">
+      <div class="flex flex-col sm:flex-row">
+        <mat-form-field class="mt-6 flex-auto">
+          <mat-label>Folio cotización</mat-label>
+          <!--<input cdkFocusInitial formControlName="firstName" matInput>-->
+          <input cdkFocusInitial formControlName="folioCotizacion" type="number" class="form-control" id="folioCotizacion" name="folioCotizacion" [(ngModel)]="addCotizacion.folioCotizacion" matInput>
+  
+          <!--<mat-icon [icIcon]="icPerson" class="mr-3" matPrefix></mat-icon>-->
+        </mat-form-field>
+  
+        <mat-form-field class="sm:mt-6 sm:ml-6 flex-auto">
+          <mat-label>Folio Factura</mat-label>
+          <!--<input cdkFocusInitial formControlName="lastName" matInput>-->
+          <input  formControlName="folioFactura" type="number" class="form-control" id="folioFactura" name="folioFactura" [(ngModel)]="addCotizacion.folioFactura" matInput>
+  
+          <!--<mat-icon [icIcon]="icPerson" class="mr-3" matPrefix></mat-icon>-->
+        </mat-form-field>
+      </div>
+  
+      <mat-form-field class="flex-auto">
+        <mat-label>Cliente</mat-label>
+        <!--<input formControlName="street" matInput>-->
+        <input  formControlName="cliente" type="text" class="form-control" id="cliente" name="cliente" [(ngModel)]="addCotizacion.cliente" matInput>
+  
+        <!--<mat-icon [icIcon]="icEditLocation" class="mr-3" matPrefix></mat-icon>-->
+      </mat-form-field>
+  
+      <div class="flex flex-col sm:flex-row">
+        <mat-form-field class="flex-auto">
+          <mat-label>Importe</mat-label>
+          <!--<input formControlName="zipcode" matInput>-->
+          <input  formControlName="importe" type="text" class="form-control" id="importe" name="importe" [(ngModel)]="addCotizacion.importe" matInput>
+  
+          <!--<mat-icon [icIcon]="icMyLocation" class="mr-3" matPrefix></mat-icon>-->
+        </mat-form-field>
+  
+        <mat-form-field class="sm:ml-6 flex-auto">
+          <mat-label>Fecha de pago</mat-label>
+          <!--<input formControlName="dia" matInput>-->
+          <input  formControlName="fechaPago" type="text" class="form-control" id="fechaPago" name="fechaPago" [(ngModel)]="addCotizacion.fechaPago" matInput>
+  
+          <!--<mat-icon [icIcon]="icPerson" class="mr-3" matPrefix></mat-icon>-->
+        </mat-form-field>
+      </div>
+
+      <mat-form-field>
+        <mat-label>Estatus</mat-label>
+        <mat-select  class="custon-select form-control" name="selectedValue" id="selectedValue"  [(ngModel)]="selectedValue" (change)="selectmyEstatus()"
+        formControlName="estatus" [ngClass]="{ 'is-invalid': submitted && f.estatus.errors }">
+          <mat-option *ngFor="let type of status" [value]="type.value">{{type.viewValue}}</mat-option>
+        </mat-select>
+        <div *ngIf="submitted && f.estatus.errors" class="invalid-feedback">
+          <div *ngIf="f.estatus.errors.required">estatus es requerido</div>
+      </div>
+      </mat-form-field>
+
+    </mat-dialog-content>
+  
+    <mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close type="button">CANCELAR</button>
+      <button *ngIf="isCreateMode()" color="primary" mat-button type="submit">CREAR CLIENTE</button>
+      <button *ngIf="isUpdateMode()" color="primary" mat-button type="submit">ACTUALIZAR CLIENTE</button>
+    </mat-dialog-actions>
+  </form>
+  
+  <mat-menu #settingsMenu="matMenu" xPosition="before" yPosition="below">
+    <button mat-menu-item>
+      <mat-icon [icIcon]="icPrint"></mat-icon>
+      <span>Imprimir</span>
+    </button>
+  
+    <button mat-menu-item>
+      <mat-icon [icIcon]="icDownload"></mat-icon>
+      <span>Exportar</span>
+    </button>
+  
+    <button mat-menu-item>
+      <mat-icon [icIcon]="icDelete"></mat-icon>
+      <span>Borrar</span>
+    </button>
+  </mat-menu>
+  
