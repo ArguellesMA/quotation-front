@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { StorageService } from './storage/storage.service'; 
 import { Cotizacion } from '../models/cotizacion/cotizacion';
 import { Estatus } from '../models/cotizacion/estatus'
+import 'rxjs/add/operator/map'
  
 @Injectable()
 export class CotizacionService {
@@ -20,9 +21,19 @@ export class CotizacionService {
 	//	private authService: AuthService,
   ) {
 
+    this.cotizacion = fb.collection('Cotizacion');
+
+    this.cotizacions = this.cotizacion.snapshotChanges().map(changes => {
+      return changes.map(a => {
+        const data = a.payload.doc.data() as Cotizacion;
+        data.$key = a.payload.doc.id;
+        return data;
+      });
+    });
+
   }
 
-  getAllCotizacion() {
+  getTest() {
 	//this.products = this.db.list('products');
   //this.Establecimientos = this.db.collection('Establecimientos');
 
@@ -31,6 +42,11 @@ export class CotizacionService {
   return this.fb.collection('Cotizacion', ref => ref.orderBy('id')).valueChanges();
   //return this.fb.collection('Establecimientos').snapshotChanges();
   
+}
+
+getAllCotizacion() {
+  console.log("print test get "+this.cotizacions)
+  return this.cotizacions;
 }
 
 postCotizacion(value) {

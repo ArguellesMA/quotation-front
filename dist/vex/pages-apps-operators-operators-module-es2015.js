@@ -1,23 +1,5 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["pages-apps-operators-operators-module"],{
 
-/***/ "./node_modules/@iconify/icons-ic/twotone-cloud-download.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@iconify/icons-ic/twotone-cloud-download.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var data = {
-	"body": "<path opacity=\".3\" d=\"M19.21 12.04l-1.53-.11l-.3-1.5A5.484 5.484 0 0 0 12 6C9.94 6 8.08 7.14 7.12 8.96l-.5.95l-1.07.11A3.99 3.99 0 0 0 2 14c0 2.21 1.79 4 4 4h13c1.65 0 3-1.35 3-3c0-1.55-1.22-2.86-2.79-2.96zM12 17l-4-4h2.55v-3h2.91v3H16l-4 4z\" fill=\"currentColor\"/><path d=\"M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5c0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4c0-2.05 1.53-3.76 3.56-3.97l1.07-.11l.5-.95A5.469 5.469 0 0 1 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5l1.53.11A2.98 2.98 0 0 1 22 15c0 1.65-1.35 3-3 3zm-5.55-8h-2.9v3H8l4 4l4-4h-2.55z\" fill=\"currentColor\"/>",
-	"width": 24,
-	"height": 24
-};
-exports.__esModule = true;
-exports.default = data;
-
-
-/***/ }),
-
 /***/ "./node_modules/@iconify/icons-ic/twotone-delete.js":
 /*!**********************************************************!*\
   !*** ./node_modules/@iconify/icons-ic/twotone-delete.js ***!
@@ -72,24 +54,6 @@ exports.default = data;
 
 /***/ }),
 
-/***/ "./node_modules/@iconify/icons-ic/twotone-more-vert.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/@iconify/icons-ic/twotone-more-vert.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var data = {
-	"body": "<path d=\"M12 8c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2s.9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2z\" fill=\"currentColor\"/>",
-	"width": 24,
-	"height": 24
-};
-exports.__esModule = true;
-exports.default = data;
-
-
-/***/ }),
-
 /***/ "./node_modules/@iconify/icons-ic/twotone-phone.js":
 /*!*********************************************************!*\
   !*** ./node_modules/@iconify/icons-ic/twotone-phone.js ***!
@@ -135,7 +99,7 @@ exports.default = data;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!--<form (ngSubmit)=\"save()\" [formGroup]=\"form\">-->\n    <form class=\"needs-validation\" #clientForm=\"ngForm\" (ngSubmit)=\"save(clientForm)\" [formGroup]=\"form\">\n        <div fxLayout=\"row\" fxLayoutAlign=\"start center\" mat-dialog-title>\n          \n      \n          <h2 *ngIf=\"form.get('nombre').value || form.get('apellidos').value\"\n              class=\"headline m-0\"\n              fxFlex=\"auto\">{{ form.get('nombre').value + ' ' + form.get('apellidos').value }}</h2>\n          <h2 *ngIf=\"!form.get('nombre').value && !form.get('apellidos').value\"\n              class=\"headline m-0\"\n              fxFlex=\"auto\">Nuevo operador</h2>\n      \n          <button [matMenuTriggerFor]=\"settingsMenu\" class=\"text-secondary\" mat-icon-button type=\"button\">\n            <mat-icon [icIcon]=\"icMoreVert\"></mat-icon>\n          </button>\n      \n          <button class=\"text-secondary\" mat-dialog-close mat-icon-button type=\"button\">\n            <mat-icon [icIcon]=\"icClose\"></mat-icon>\n          </button>\n        </div>\n      \n        <mat-divider class=\"-mx-6 text-border\"></mat-divider>\n      \n        <mat-dialog-content fxLayout=\"column\">\n          <div class=\"flex flex-col sm:flex-row\">\n            <mat-form-field class=\"mt-6 flex-auto\">\n              <mat-label>Nombre</mat-label>\n              <!--<input cdkFocusInitial formControlName=\"firstName\" matInput>-->\n              <input cdkFocusInitial formControlName=\"nombre\" type=\"text\" class=\"form-control\" id=\"nombre\" name=\"nombre\" [(ngModel)]=\"addOperators.nombre\" matInput>\n      \n              <mat-icon [icIcon]=\"icPerson\" class=\"mr-3\" matPrefix></mat-icon>\n            </mat-form-field>\n      \n            <mat-form-field class=\"sm:mt-6 sm:ml-6 flex-auto\">\n              <mat-label>Apellidos</mat-label>\n              <!--<input cdkFocusInitial formControlName=\"lastName\" matInput>-->\n              <input cdkFocusInitial formControlName=\"apellidos\" type=\"text\" class=\"form-control\" id=\"apellidos\" name=\"apellidos\" [(ngModel)]=\"addOperators.apellidos\" matInput>\n      \n              <mat-icon [icIcon]=\"icPerson\" class=\"mr-3\" matPrefix></mat-icon>\n            </mat-form-field>\n          </div>\n      \n          <mat-form-field class=\"flex-auto\">\n            <mat-label>Curp</mat-label>\n            <!--<input formControlName=\"street\" matInput>-->\n            <input cdkFocusInitial formControlName=\"curp\" type=\"text\" class=\"form-control\" id=\"curp\" name=\"curp\" [(ngModel)]=\"addOperators.curp\" matInput>\n      \n            <mat-icon [icIcon]=\"icEditLocation\" class=\"mr-3\" matPrefix></mat-icon>\n          </mat-form-field>\n      \n          <div class=\"flex flex-col sm:flex-row\">\n            <mat-form-field class=\"flex-auto\">\n              <mat-label>Fecha nacimiento</mat-label>\n              <!--<input formControlName=\"zipcode\" matInput>-->\n              <input cdkFocusInitial formControlName=\"fechaNacimiento\" type=\"text\" class=\"form-control\" id=\"fechaNacimiento\" name=\"fechaNacimiento\" [(ngModel)]=\"addOperators.fechaNacimiento\" matInput>\n      \n              <mat-icon [icIcon]=\"icMyLocation\" class=\"mr-3\" matPrefix></mat-icon>\n            </mat-form-field>\n      \n            <mat-form-field class=\"sm:ml-6 flex-auto\">\n              <mat-label>Correo</mat-label>\n              <!--<input formControlName=\"dia\" matInput>-->\n              <input cdkFocusInitial formControlName=\"correo\" type=\"text\" class=\"form-control\" id=\"correo\" name=\"correo\" [(ngModel)]=\"addOperators.correo\" matInput>\n      \n              <mat-icon [icIcon]=\"icPerson\" class=\"mr-3\" matPrefix></mat-icon>\n            </mat-form-field>\n          </div>\n      \n          <div class=\"flex flex-col sm:flex-row\">\n            \n            <mat-form-field class=\"flex-auto\">\n              <mat-label>Telefono</mat-label>\n              <!--<input formControlName=\"ciudad\" matInput>-->\n              <input cdkFocusInitial formControlName=\"telefono\" type=\"number\" class=\"form-control\" id=\"telefono\" name=\"telefono\" [(ngModel)]=\"addOperators.telefono\" matInput>\n      \n              <mat-icon [icIcon]=\"icLocationCity\" class=\"mr-3\" matPrefix></mat-icon>\n            </mat-form-field>\n      \n          </div>\n      \n          <mat-form-field class=\"flex-auto\">\n            <mat-label>Codigo postal</mat-label>\n            <!--<input formControlName=\"phoneNumber\" matInput>-->\n            <input cdkFocusInitial formControlName=\"codigoPostal\" type=\"number\" class=\"form-control\" id=\"codigoPostal\" name=\"codigoPostal\" [(ngModel)]=\"addOperators.codigoPostal\" matInput>\n      \n            <mat-icon [icIcon]=\"icPhone\" class=\"mr-3\" matPrefix></mat-icon>\n          </mat-form-field>\n\n          <mat-form-field class=\"flex-auto\">\n            <mat-label>Localidad</mat-label>\n            <!--<input formControlName=\"phoneNumber\" matInput>-->\n            <input cdkFocusInitial formControlName=\"localidad\" type=\"text\" class=\"form-control\" id=\"localidad\" name=\"localidad\" [(ngModel)]=\"addOperators.localidad\" matInput>\n      \n            <mat-icon [icIcon]=\"icPhone\" class=\"mr-3\" matPrefix></mat-icon>\n          </mat-form-field>\n\n          <mat-form-field class=\"flex-auto\">\n            <mat-label>Municipio</mat-label>\n            <!--<input formControlName=\"phoneNumber\" matInput>-->\n            <input cdkFocusInitial formControlName=\"municipio\" type=\"text\" class=\"form-control\" id=\"municipio\" name=\"municipio\" [(ngModel)]=\"addOperators.municipio\" matInput>\n      \n            <mat-icon [icIcon]=\"icPhone\" class=\"mr-3\" matPrefix></mat-icon>\n          </mat-form-field>\n\n          <mat-form-field class=\"flex-auto\">\n            <mat-label>Estado</mat-label>\n            <!--<input formControlName=\"phoneNumber\" matInput>-->\n            <input cdkFocusInitial formControlName=\"estado\" type=\"text\" class=\"form-control\" id=\"estado\" name=\"estado\" [(ngModel)]=\"addOperators.estado\" matInput>\n      \n            <mat-icon [icIcon]=\"icPhone\" class=\"mr-3\" matPrefix></mat-icon>\n          </mat-form-field>\n      \n        </mat-dialog-content>\n      \n        <mat-dialog-actions align=\"end\">\n          <button mat-button mat-dialog-close type=\"button\">CANCELAR</button>\n          <button *ngIf=\"isCreateMode()\" color=\"primary\" mat-button type=\"submit\">CREAR CLIENTE</button>\n          <button *ngIf=\"isUpdateMode()\" color=\"primary\" mat-button type=\"submit\">ACTUALIZAR CLIENTE</button>\n        </mat-dialog-actions>\n      </form>\n      \n      <mat-menu #settingsMenu=\"matMenu\" xPosition=\"before\" yPosition=\"below\">\n        <button mat-menu-item>\n          <mat-icon [icIcon]=\"icPrint\"></mat-icon>\n          <span>Imprimir</span>\n        </button>\n      \n        <button mat-menu-item>\n          <mat-icon [icIcon]=\"icDownload\"></mat-icon>\n          <span>Exportar</span>\n        </button>\n      \n        <button mat-menu-item>\n          <mat-icon [icIcon]=\"icDelete\"></mat-icon>\n          <span>Borrar</span>\n        </button>\n      </mat-menu>\n      ");
+/* harmony default export */ __webpack_exports__["default"] = ("<!--<form (ngSubmit)=\"save()\" [formGroup]=\"form\">-->\n    <form class=\"needs-validation\" [formGroup]=\"form\" novalidate (ngSubmit)=\"save(form.value)\">\n        <div fxLayout=\"row\" fxLayoutAlign=\"start center\" mat-dialog-title>\n          \n      \n          <h2 *ngIf=\"form.get('apellidos').value || form.get('nombre').value\"\n              class=\"headline m-0\"\n              fxFlex=\"auto\">{{ form.get('apellidos').value + ' ' + form.get('nombre').value }}</h2>\n          <h2 *ngIf=\"!form.get('apellidos').value && !form.get('nombre').value\"\n              class=\"headline m-0\"\n              fxFlex=\"auto\">Nueva operador</h2>\n\n      \n          <button [matMenuTriggerFor]=\"settingsMenu\" class=\"text-secondary\" mat-icon-button type=\"button\">\n            <mat-icon [icIcon]=\"icMoreVert\"></mat-icon>\n          </button>\n      \n          <button class=\"text-secondary\" mat-dialog-close mat-icon-button type=\"button\">\n            <mat-icon [icIcon]=\"icClose\"></mat-icon>\n          </button>\n        </div>\n      \n        <mat-divider class=\"-mx-6 text-border\"></mat-divider>\n      \n        <mat-dialog-content fxLayout=\"column\">\n          <div class=\"flex flex-col sm:flex-row\">\n            <mat-form-field class=\"mt-6 flex-auto\">\n              <mat-label>Nombre</mat-label>\n              <!--<input cdkFocusInitial formControlName=\"firstName\" matInput>-->\n              <input cdkFocusInitial formControlName=\"nombre\" type=\"text\" class=\"form-control\" id=\"nombre\" name=\"nombre\" [(ngModel)]=\"addOperators.nombre\" matInput>\n      \n              <!--<mat-icon [icIcon]=\"icPerson\" class=\"mr-3\" matPrefix></mat-icon>-->\n            </mat-form-field>\n      \n            <mat-form-field class=\"sm:mt-6 sm:ml-6 flex-auto\">\n              <mat-label>Apellidos</mat-label>\n              <!--<input cdkFocusInitial formControlName=\"lastName\" matInput>-->\n              <input  formControlName=\"apellidos\" type=\"text\" class=\"form-control\" id=\"apellidos\" name=\"apellidos\" [(ngModel)]=\"addOperators.apellidos\" matInput>\n      \n              <!--<mat-icon [icIcon]=\"icPerson\" class=\"mr-3\" matPrefix></mat-icon>-->\n            </mat-form-field>\n          </div>\n      \n          <mat-form-field class=\"flex-auto\">\n            <mat-label>Licencia</mat-label>\n            <!--<input formControlName=\"street\" matInput>-->\n            <input  formControlName=\"licencia\" type=\"text\" class=\"form-control\" id=\"licencia\" name=\"licencia\" [(ngModel)]=\"addOperators.licencia\" matInput>\n      \n            <!--<mat-icon [icIcon]=\"icEditLocation\" class=\"mr-3\" matPrefix></mat-icon>-->\n          </mat-form-field>\n      \n          <div class=\"flex flex-col sm:flex-row\">\n            <mat-form-field class=\"flex-auto\">\n              <mat-label>Tipo licencia</mat-label>\n              <!--<input formControlName=\"zipcode\" matInput>-->\n              <input  formControlName=\"tipoLicencia\" type=\"text\" class=\"form-control\" id=\"tipoLicencia\" name=\"tipoLicencia\" [(ngModel)]=\"addOperators.tipoLicencia\" matInput>\n      \n              <!--<mat-icon [icIcon]=\"icMyLocation\" class=\"mr-3\" matPrefix></mat-icon>-->\n            </mat-form-field>\n      \n            <mat-form-field class=\"sm:ml-6 flex-auto\">\n              <mat-label>INE</mat-label>\n              <!--<input formControlName=\"dia\" matInput>-->\n              <input  formControlName=\"ine\" type=\"text\" class=\"form-control\" id=\"ine\" name=\"ine\" [(ngModel)]=\"addOperators.ine\" matInput>\n      \n              <!--<mat-icon [icIcon]=\"icPerson\" class=\"mr-3\" matPrefix></mat-icon>-->\n            </mat-form-field>\n          </div>\n\n          <mat-form-field class=\"flex-auto\">\n            <mat-label>Localidad</mat-label>\n            <!--<input formControlName=\"phoneNumber\" matInput>-->\n            <input  formControlName=\"localidad\" type=\"text\" class=\"form-control\" id=\"localidad\" name=\"localidad\" [(ngModel)]=\"addOperators.localidad\" matInput>\n      \n            <!--<mat-icon [icIcon]=\"icPhone\" class=\"mr-3\" matPrefix></mat-icon>-->\n          </mat-form-field>\n\n          <mat-form-field class=\"flex-auto\">\n            <mat-label>Municipio</mat-label>\n            <!--<input formControlName=\"phoneNumber\" matInput>-->\n            <input  formControlName=\"municipio\" type=\"text\" class=\"form-control\" id=\"municipio\" name=\"municipio\" [(ngModel)]=\"addOperators.municipio\" matInput>\n      \n            <!--<mat-icon [icIcon]=\"icPhone\" class=\"mr-3\" matPrefix></mat-icon>-->\n          </mat-form-field>\n\n          <mat-form-field class=\"flex-auto\">\n            <mat-label>Estado</mat-label>\n            <!--<input formControlName=\"phoneNumber\" matInput>-->\n            <input  formControlName=\"estado\" type=\"text\" class=\"form-control\" id=\"estado\" name=\"estado\" [(ngModel)]=\"addOperators.estado\" matInput>\n      \n            <!--<mat-icon [icIcon]=\"icPhone\" class=\"mr-3\" matPrefix></mat-icon>-->\n          </mat-form-field>\n\n          <hr>\n          <div class=\"form-group\">\n            <h6>Foto del operador</h6>\n            <!--(change)=\"onUpload($event)\"-->\n           <div>\n              <label class=\"custom-file-upload\">\n                <input type=\"file\" accept=\".jpeg,.jpg,.png,.svg\" (input)=\"onUpload($event)\"/>\n                Seleccionar imagen\n              </label>\n\n              <br>\n              <br>\n              <img [src]=\"downloadableURL\" width=\"300px\" height=\"300px\"/>\n              \n              <div class=\"progress\" *ngIf=\"uploafPercent\">\n                <div class=\"progress-bar progress-bar-striped bg-success\" role=\"progressbar\" [style.width]=\"(uploafPercent | async)+ '%'\">\n                  {{uploafPercent | async}}%\n                </div>\n              </div> \n\n           \n          </div>\n            <br>\n            <br>\n            <!--<p> URL aqui: {{ downloadableURL }} </p>-->\n     \n            <input #urlimage type=\"hidden\" [value]=\"downloadableURL\">    \n     \n          </div> \n      \n        </mat-dialog-content>\n      \n        <mat-dialog-actions align=\"end\">\n          <button mat-button mat-dialog-close type=\"button\">CANCELAR</button>\n          <button *ngIf=\"isCreateMode()\" color=\"primary\" mat-button type=\"submit\">CREAR CLIENTE</button>\n          <button *ngIf=\"isUpdateMode()\" color=\"primary\" mat-button type=\"submit\">ACTUALIZAR CLIENTE</button>\n        </mat-dialog-actions>\n      </form>\n      \n      <mat-menu #settingsMenu=\"matMenu\" xPosition=\"before\" yPosition=\"below\">\n        <button mat-menu-item>\n          <mat-icon [icIcon]=\"icPrint\"></mat-icon>\n          <span>Imprimir</span>\n        </button>\n      \n        <button mat-menu-item>\n          <mat-icon [icIcon]=\"icDownload\"></mat-icon>\n          <span>Exportar</span>\n        </button>\n      \n        <button mat-menu-item>\n          <mat-icon [icIcon]=\"icDelete\"></mat-icon>\n          <span>Borrar</span>\n        </button>\n      </mat-menu>\n      ");
 
 /***/ }),
 
@@ -148,7 +112,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<vex-page-layout>\n\n    <vex-page-layout-header class=\"pb-16\" fxLayout=\"column\" fxLayoutAlign=\"center start\">\n      <div [class.container]=\"layoutCtrl.value === 'boxed'\"\n           [class.px-gutter]=\"layoutCtrl.value === 'fullwidth'\"\n           class=\"w-full flex flex-col sm:flex-row justify-between\">\n        <div>\n          <h1 class=\"title mt-0 mb-1\">Registro de operador</h1>\n          <vex-breadcrumbs [crumbs]=\"['Clientes', 'Tabla de Clientes']\"></vex-breadcrumbs>\n        </div>\n  \n        <mat-button-toggle-group [formControl]=\"layoutCtrl\" class=\"mt-4 sm:mt-0\">\n          <mat-button-toggle value=\"boxed\">REDUCIR</mat-button-toggle>\n          <mat-button-toggle value=\"fullwidth\">AMPLIAR</mat-button-toggle>\n        </mat-button-toggle-group>\n      </div>\n    </vex-page-layout-header>\n  \n    <vex-page-layout-content [class.container]=\"layoutCtrl.value === 'boxed'\"\n                             [class.px-gutter]=\"layoutCtrl.value === 'fullwidth'\"\n                             class=\"-mt-6\">\n  \n      <div class=\"card overflow-auto -mt-16\">\n        <div class=\"bg-app-bar px-6 h-16 border-b sticky left-0\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\n          <h2 class=\"title my-0 ltr:pr-4 rtl:pl-4 ltr:mr-4 rtl:ml-4 ltr:border-r rtl:border-l\" fxFlex=\"none\" fxHide.xs>\n            <span *ngIf=\"selection.isEmpty()\">Operador</span>\n            <span *ngIf=\"selection.hasValue()\">{{ selection.selected.length }}\n              Operador<span *ngIf=\"selection.selected.length > 1\">s</span> Seleccionado</span>\n          </h2>\n  \n          <div *ngIf=\"selection.hasValue()\" class=\"mr-4 pr-4 border-r\" fxFlex=\"none\">\n            <button (click)=\"removeAt(selection.selected)\"\n                    color=\"primary\"\n                    mat-icon-button\n                    matTooltip=\"Borrar Selecionado\"\n                    type=\"button\">\n              <mat-icon [icIcon]=\"icDelete\"></mat-icon>\n            </button>\n  \n            <button color=\"primary\" mat-icon-button matTooltip=\"Otra Acción\" type=\"button\">\n              <mat-icon [icIcon]=\"icFolder\"></mat-icon>\n            </button>\n          </div>\n  \n          <div class=\"bg-card rounded-full border px-4\"\n               fxFlex=\"400px\"\n               fxFlex.lt-md=\"auto\"\n               fxHide.xs\n               fxLayout=\"row\"\n               fxLayoutAlign=\"start center\">\n            <ic-icon [icIcon]=\"icSearch\" size=\"20px\"></ic-icon>\n            <input [formControl]=\"searchCtrl\"\n                   class=\"px-4 py-3 border-0 outline-none w-full bg-transparent\"\n                   placeholder=\"Buscar...\"\n                   type=\"search\">\n          </div>\n  \n          <span fxFlex></span>\n  \n          <button class=\"ml-4\" fxFlex=\"none\" fxHide.gt-xs mat-icon-button type=\"button\">\n            <mat-icon [icIcon]=\"icSearch\"></mat-icon>\n          </button>\n  \n          <!--<button [matMenuTriggerFor]=\"columnFilterMenu\"\n                  class=\"ml-4\"\n                  fxFlex=\"none\"\n                  mat-icon-button\n                  matTooltip=\"Filtrar Columnas\"\n                  type=\"button\">\n            <mat-icon [icIcon]=\"icFilterList\"></mat-icon>\n          </button>-->\n  \n          <button (click)=\"createCustomer()\"\n                  class=\"ml-4\"\n                  color=\"primary\"\n                  fxFlex=\"none\"\n                  mat-mini-fab\n                  matTooltip=\"Agregar Estableciento\"\n                  type=\"button\">\n            <mat-icon [icIcon]=\"icAdd\"></mat-icon>\n          </button>\n        </div>\n  \n        <div class=\"example-container mat-elevation-z8\">\n          <mat-table #table [dataSource]=\"dataSource\">\n        \n            <!--- Note that these columns can be defined in any order.\n                  The actual rendered columns are set as a property on the row definition\" -->\n        \n            <!--==========Id Column===============\n            <ng-container matColumnDef=\"id\">\n              <mat-header-cell *matHeaderCellDef> id </mat-header-cell>\n              <mat-cell *matCellDef=\"let element\"> {{element.id}} </mat-cell>\n            </ng-container>-->\n            \n            <!--==========direccion Column===============-->\n            <ng-container matColumnDef=\"nombre\">\n              <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>\n              <mat-cell *matCellDef=\"let element\"> {{element.nombre}} </mat-cell>\n            </ng-container>\n  \n            <!--==========telefono Column===============-->\n            <ng-container matColumnDef=\"apellidos\">\n              <mat-header-cell *matHeaderCellDef> Apellidos </mat-header-cell>\n              <mat-cell *matCellDef=\"let element\"> {{element.apellidos}} </mat-cell>\n            </ng-container>\n  \n            <!--==========razonSocial Column===============-->\n            <ng-container matColumnDef=\"curp\">\n              <mat-header-cell *matHeaderCellDef> Curp </mat-header-cell>\n              <mat-cell *matCellDef=\"let element\"> {{element.curp}} </mat-cell>\n            </ng-container>\n  \n            <!--==========rfc Column===============-->\n            <ng-container matColumnDef=\"fechaNacimiento\">\n              <mat-header-cell *matHeaderCellDef> Fecha nacimiento </mat-header-cell>\n              <mat-cell *matCellDef=\"let element\"> {{element.fechaNacimiento}} </mat-cell>\n            </ng-container>\n  \n            <!--==========tipo Column===============-->\n            <ng-container matColumnDef=\"correo\">\n              <mat-header-cell *matHeaderCellDef> Correo </mat-header-cell>\n              <mat-cell *matCellDef=\"let element\"> {{element.correo}} </mat-cell>\n            </ng-container>\n  \n            <!--==========Nombre Column===============-->\n            <ng-container matColumnDef=\"telefono\">\n              <mat-header-cell *matHeaderCellDef> Telefono </mat-header-cell>\n              <mat-cell *matCellDef=\"let element\"> {{element.telefono}} </mat-cell>\n            </ng-container>\n        \n            <!--==========email Column===============-->\n            <ng-container matColumnDef=\"codigoPostal\">\n              <mat-header-cell *matHeaderCellDef> Codigo postal </mat-header-cell>\n              <mat-cell *matCellDef=\"let element\"> {{element.codigoPostal}} </mat-cell>\n            </ng-container>\n\n            <!--==========email Column===============-->\n            <ng-container matColumnDef=\"localidad\">\n                <mat-header-cell *matHeaderCellDef> Localidad </mat-header-cell>\n                <mat-cell *matCellDef=\"let element\"> {{element.localidad}} </mat-cell>\n              </ng-container>\n              \n            <!--==========email Column===============-->\n            <ng-container matColumnDef=\"municipio\">\n                <mat-header-cell *matHeaderCellDef> Municipio </mat-header-cell>\n                <mat-cell *matCellDef=\"let element\"> {{element.municipio}} </mat-cell>\n              </ng-container>\n              \n            <!--==========email Column===============-->\n            <ng-container matColumnDef=\"estado\">\n                <mat-header-cell *matHeaderCellDef> Estado </mat-header-cell>\n                <mat-cell *matCellDef=\"let element\"> {{element.estado}} </mat-cell>\n              </ng-container>              \n          \n            <!--==========Update Column=================-->\n            <ng-container matColumnDef=\"editar\" >\n              <th mat-header-cell *matHeaderCellDef> Editar </th>\n              <td mat-cell *matCellDef=\"let element\" class=\"action-link\"  > \n                  <button  (click)=\"updateCustomer(element)\" >\n                    \n                    <mat-icon [icIcon]=\"icEdit\"></mat-icon>\n                  </button>\n              </td>\n            </ng-container>\n            \n            <!--==========Delete Column=================-->\n            <ng-container matColumnDef=\"borrar\" >\n              <th mat-header-cell *matHeaderCellDef> Borrar </th>\n              <td mat-cell *matCellDef=\"let element\" class=\"action-link\" > \n                  <button (click)=\"removeAt(element.$key)\"><!--Tambien sirve para obtener datos espesificos de la fila seleccionada-->\n                    <mat-icon [icIcon]=\"icDelete\"></mat-icon>\n                  </button>\n              </td>\n            </ng-container>\n  \n            <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n            <mat-row *matRowDef=\"let element; columns: displayedColumns;\"></mat-row>\n          </mat-table>\n        </div>\n  \n        <mat-paginator [pageSizeOptions]=\"pageSizeOptions\" [pageSize]=\"pageSize\" class=\"sticky left-0\"></mat-paginator>\n      </div>\n  \n    </vex-page-layout-content>\n  \n  </vex-page-layout>\n  \n  <!--<mat-menu #columnFilterMenu=\"matMenu\" xPosition=\"before\" yPosition=\"below\">\n    <button (click)=\"toggleColumnVisibility(column, $event)\" *ngFor=\"let column of displayedColumns\"\n            class=\"checkbox-customer mat-menu-customer\">\n      <mat-checkbox (click)=\"$event.stopPropagation()\" [(ngModel)]=\"column.visible\" color=\"primary\">\n        {{ column.label }}\n      </mat-checkbox>\n    </button>\n  </mat-menu>-->\n  \n  <mat-menu #actionsMenu=\"matMenu\" xPosition=\"before\" yPosition=\"below\">\n    <ng-template let-customer=\"customer\" matMenuContent>\n      <button (click)=\"updateCustomer(customer)\" mat-menu-item>\n        <mat-icon [icIcon]=\"icEdit\"></mat-icon>\n        <span>Modificar</span>\n      </button>\n      <button (click)=\"removeAt(customer)\" mat-menu-item>\n        <mat-icon [icIcon]=\"icDelete\"></mat-icon>\n        <span>Borrar</span>\n      </button>\n    </ng-template>\n  </mat-menu>\n  ");
+/* harmony default export */ __webpack_exports__["default"] = ("<vex-page-layout>\n\n    <vex-page-layout-header class=\"pb-16\" fxLayout=\"column\" fxLayoutAlign=\"center start\">\n      <div [class.container]=\"layoutCtrl.value === 'boxed'\"\n           [class.px-gutter]=\"layoutCtrl.value === 'fullwidth'\"\n           class=\"w-full flex flex-col sm:flex-row justify-between\">\n        <div>\n          <h1 class=\"title mt-0 mb-1\">Registro de operador</h1>\n          <vex-breadcrumbs [crumbs]=\"['Clientes', 'Tabla de Clientes']\"></vex-breadcrumbs>\n        </div>\n  \n        <mat-button-toggle-group [formControl]=\"layoutCtrl\" class=\"mt-4 sm:mt-0\">\n          <mat-button-toggle value=\"boxed\">REDUCIR</mat-button-toggle>\n          <mat-button-toggle value=\"fullwidth\">AMPLIAR</mat-button-toggle>\n        </mat-button-toggle-group>\n      </div>\n    </vex-page-layout-header>\n  \n    <vex-page-layout-content [class.container]=\"layoutCtrl.value === 'boxed'\"\n                             [class.px-gutter]=\"layoutCtrl.value === 'fullwidth'\"\n                             class=\"-mt-6\">\n  \n      <div class=\"card overflow-auto -mt-16\">\n        <div class=\"bg-app-bar px-6 h-16 border-b sticky left-0\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\n          <h2 class=\"title my-0 ltr:pr-4 rtl:pl-4 ltr:mr-4 rtl:ml-4 ltr:border-r rtl:border-l\" fxFlex=\"none\" fxHide.xs>\n            <span *ngIf=\"selection.isEmpty()\">Operador</span>\n            <span *ngIf=\"selection.hasValue()\">{{ selection.selected.length }}\n              Operador<span *ngIf=\"selection.selected.length > 1\">s</span> Seleccionado</span>\n          </h2>\n  \n          <div *ngIf=\"selection.hasValue()\" class=\"mr-4 pr-4 border-r\" fxFlex=\"none\">\n            <button (click)=\"removeAt(selection.selected)\"\n                    color=\"primary\"\n                    mat-icon-button\n                    matTooltip=\"Borrar Selecionado\"\n                    type=\"button\">\n              <mat-icon [icIcon]=\"icDelete\"></mat-icon>\n            </button>\n  \n            <button color=\"primary\" mat-icon-button matTooltip=\"Otra Acción\" type=\"button\">\n              <mat-icon [icIcon]=\"icFolder\"></mat-icon>\n            </button>\n          </div>\n  \n          <div class=\"bg-card rounded-full border px-4\"\n               fxFlex=\"400px\"\n               fxFlex.lt-md=\"auto\"\n               fxHide.xs\n               fxLayout=\"row\"\n               fxLayoutAlign=\"start center\">\n            <ic-icon [icIcon]=\"icSearch\" size=\"20px\"></ic-icon>\n            <input [formControl]=\"searchCtrl\"\n                   class=\"px-4 py-3 border-0 outline-none w-full bg-transparent\"\n                   placeholder=\"Buscar...\"\n                   type=\"search\">\n          </div>\n  \n          <span fxFlex></span>\n  \n          <button class=\"ml-4\" fxFlex=\"none\" fxHide.gt-xs mat-icon-button type=\"button\">\n            <mat-icon [icIcon]=\"icSearch\"></mat-icon>\n          </button>\n  \n          <!--<button [matMenuTriggerFor]=\"columnFilterMenu\"\n                  class=\"ml-4\"\n                  fxFlex=\"none\"\n                  mat-icon-button\n                  matTooltip=\"Filtrar Columnas\"\n                  type=\"button\">\n            <mat-icon [icIcon]=\"icFilterList\"></mat-icon>\n          </button>-->\n  \n          <button (click)=\"createCustomer()\"\n                  class=\"ml-4\"\n                  color=\"primary\"\n                  fxFlex=\"none\"\n                  mat-mini-fab\n                  matTooltip=\"Agregar Estableciento\"\n                  type=\"button\">\n            <mat-icon [icIcon]=\"icAdd\"></mat-icon>\n          </button>\n        </div>\n  \n        <div class=\"example-container mat-elevation-z8\">\n          <mat-table #table [dataSource]=\"dataSource\">\n        \n            <!--- Note that these columns can be defined in any order.\n                  The actual rendered columns are set as a property on the row definition\" -->\n        \n            <!--==========Id Column===============\n            <ng-container matColumnDef=\"id\">\n              <mat-header-cell *matHeaderCellDef> id </mat-header-cell>\n              <mat-cell *matCellDef=\"let element\"> {{element.id}} </mat-cell>\n            </ng-container>-->\n            \n            <!--==========image Column===============-->\n            <ng-container matColumnDef=\"operadorFoto\">\n              <mat-header-cell *matHeaderCellDef> Foto operador </mat-header-cell>>\n              <mat-cell *matCellDef=\"let element\"> \n                <a href=\"{{ element.operadorFoto }}\" target=\"_blank\">\n                  <img [src]=\"element.operadorFoto\" width=\"200px\" height=\"200px\"/>               \n                </a>\n              </mat-cell>\n            </ng-container>\n        \n                \n            <!--==========direccion Column===============-->\n            <ng-container matColumnDef=\"nombre\">\n              <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>\n              <mat-cell *matCellDef=\"let element\"> {{element.nombre}} </mat-cell>\n            </ng-container>\n  \n            <!--==========telefono Column===============-->\n            <ng-container matColumnDef=\"apellidos\">\n              <mat-header-cell *matHeaderCellDef> Apellidos </mat-header-cell>\n              <mat-cell *matCellDef=\"let element\"> {{element.apellidos}} </mat-cell>\n            </ng-container>\n  \n            <!--==========razonSocial Column===============-->\n            <ng-container matColumnDef=\"licencia\">\n              <mat-header-cell *matHeaderCellDef> Licencia </mat-header-cell>\n              <mat-cell *matCellDef=\"let element\"> {{element.licencia}} </mat-cell>\n            </ng-container>\n  \n            <!--==========rfc Column===============-->\n            <ng-container matColumnDef=\"tipoLicencia\">\n              <mat-header-cell *matHeaderCellDef> Tipo licencia </mat-header-cell>\n              <mat-cell *matCellDef=\"let element\"> {{element.tipoLicencia}} </mat-cell>\n            </ng-container>\n  \n            <!--==========tipo Column===============-->\n            <ng-container matColumnDef=\"ine\">\n              <mat-header-cell *matHeaderCellDef> INE </mat-header-cell>\n              <mat-cell *matCellDef=\"let element\"> {{element.ine}} </mat-cell>\n            </ng-container>\n  \n            <!--==========email Column===============-->\n            <ng-container matColumnDef=\"localidad\">\n                <mat-header-cell *matHeaderCellDef> Localidad </mat-header-cell>\n                <mat-cell *matCellDef=\"let element\"> {{element.localidad}} </mat-cell>\n              </ng-container>\n              \n            <!--==========email Column===============-->\n            <ng-container matColumnDef=\"municipio\">\n                <mat-header-cell *matHeaderCellDef> Municipio </mat-header-cell>\n                <mat-cell *matCellDef=\"let element\"> {{element.municipio}} </mat-cell>\n              </ng-container>\n              \n            <!--==========email Column===============-->\n            <ng-container matColumnDef=\"estado\">\n                <mat-header-cell *matHeaderCellDef> Estado </mat-header-cell>\n                <mat-cell *matCellDef=\"let element\"> {{element.estado}} </mat-cell>\n              </ng-container>              \n          \n            <!--==========Update Column=================-->\n            <ng-container matColumnDef=\"editar\" >\n              <th mat-header-cell *matHeaderCellDef> Editar </th>\n              <td mat-cell *matCellDef=\"let element\" class=\"action-link\"  > \n                  <button  (click)=\"updateCustomer(element)\" >\n                    \n                    <mat-icon [icIcon]=\"icEdit\"></mat-icon>\n                  </button>\n              </td>\n            </ng-container>\n            \n            <!--==========Delete Column=================-->\n            <ng-container matColumnDef=\"borrar\" >\n              <th mat-header-cell *matHeaderCellDef> Borrar </th>\n              <td mat-cell *matCellDef=\"let element\" class=\"action-link\" > \n                  <button (click)=\"removeAt(element.$key)\"><!--Tambien sirve para obtener datos espesificos de la fila seleccionada-->\n                    <mat-icon [icIcon]=\"icDelete\"></mat-icon>\n                  </button>\n              </td>\n            </ng-container>\n  \n            <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n            <mat-row *matRowDef=\"let element; columns: displayedColumns;\"></mat-row>\n          </mat-table>\n        </div>\n  \n        <mat-paginator [pageSizeOptions]=\"pageSizeOptions\" [pageSize]=\"pageSize\" class=\"sticky left-0\"></mat-paginator>\n      </div>\n  \n    </vex-page-layout-content>\n  \n  </vex-page-layout>\n  \n  <!--<mat-menu #columnFilterMenu=\"matMenu\" xPosition=\"before\" yPosition=\"below\">\n    <button (click)=\"toggleColumnVisibility(column, $event)\" *ngFor=\"let column of displayedColumns\"\n            class=\"checkbox-customer mat-menu-customer\">\n      <mat-checkbox (click)=\"$event.stopPropagation()\" [(ngModel)]=\"column.visible\" color=\"primary\">\n        {{ column.label }}\n      </mat-checkbox>\n    </button>\n  </mat-menu>-->\n  \n  <mat-menu #actionsMenu=\"matMenu\" xPosition=\"before\" yPosition=\"below\">\n    <ng-template let-customer=\"customer\" matMenuContent>\n      <button (click)=\"updateCustomer(customer)\" mat-menu-item>\n        <mat-icon [icIcon]=\"icEdit\"></mat-icon>\n        <span>Modificar</span>\n      </button>\n      <button (click)=\"removeAt(customer)\" mat-menu-item>\n        <mat-icon [icIcon]=\"icDelete\"></mat-icon>\n        <span>Borrar</span>\n      </button>\n    </ng-template>\n  </mat-menu>\n  ");
 
 /***/ }),
 
@@ -367,7 +331,7 @@ BreadcrumbsModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2FwcHMvb3BlcmF0b3JzL2FkZC1vcGVyYXRvcnMvYWRkLW9wZXJhdG9ycy5jb21wb25lbnQuc2NzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = ("input[type=file] {\n  display: none;\n}\n\n.custom-file-upload {\n  display: inline-block;\n  padding: 10px 15px;\n  font-size: 15px;\n  cursor: pointer;\n  text-align: center;\n  text-decoration: none;\n  outline: none;\n  color: #fff;\n  background-color: #4CAF50;\n  border: none;\n  border-radius: 15px;\n  box-shadow: 0 9px #999;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL21hcmNvL0Rlc2t0b3AvQ290aXphY2lvbi9zcmMvYXBwL3BhZ2VzL2FwcHMvb3BlcmF0b3JzL2FkZC1vcGVyYXRvcnMvYWRkLW9wZXJhdG9ycy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvcGFnZXMvYXBwcy9vcGVyYXRvcnMvYWRkLW9wZXJhdG9ycy9hZGQtb3BlcmF0b3JzLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBQTtBQ0NGOztBREVBO0VBQ0UscUJBQUE7RUFDQSxrQkFBQTtFQUNBLGVBQUE7RUFDQSxlQUFBO0VBQ0Esa0JBQUE7RUFDQSxxQkFBQTtFQUNBLGFBQUE7RUFDQSxXQUFBO0VBQ0EseUJBQUE7RUFDQSxZQUFBO0VBQ0EsbUJBQUE7RUFDQSxzQkFBQTtBQ0NGIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvYXBwcy9vcGVyYXRvcnMvYWRkLW9wZXJhdG9ycy9hZGQtb3BlcmF0b3JzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW5wdXRbdHlwZT1maWxlXSB7XG4gIGRpc3BsYXk6IG5vbmU7XG59XG5cbi5jdXN0b20tZmlsZS11cGxvYWQge1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIHBhZGRpbmc6IDEwcHggMTVweDtcbiAgZm9udC1zaXplOiAxNXB4O1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICBvdXRsaW5lOiBub25lO1xuICBjb2xvcjogI2ZmZjtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzRDQUY1MDtcbiAgYm9yZGVyOiBub25lO1xuICBib3JkZXItcmFkaXVzOiAxNXB4O1xuICBib3gtc2hhZG93OiAwIDlweCAjOTk5O1xufSIsImlucHV0W3R5cGU9ZmlsZV0ge1xuICBkaXNwbGF5OiBub25lO1xufVxuXG4uY3VzdG9tLWZpbGUtdXBsb2FkIHtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICBwYWRkaW5nOiAxMHB4IDE1cHg7XG4gIGZvbnQtc2l6ZTogMTVweDtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgb3V0bGluZTogbm9uZTtcbiAgY29sb3I6ICNmZmY7XG4gIGJhY2tncm91bmQtY29sb3I6ICM0Q0FGNTA7XG4gIGJvcmRlcjogbm9uZTtcbiAgYm9yZGVyLXJhZGl1czogMTVweDtcbiAgYm94LXNoYWRvdzogMCA5cHggIzk5OTtcbn0iXX0= */");
 
 /***/ }),
 
@@ -409,7 +373,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_models_operators__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../../../shared/models/operators */ "./src/app/shared/models/operators.ts");
 /* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/es2015/index.js");
 /* harmony import */ var _shared_services_storage_storage_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../../../shared/services/storage/storage.service */ "./src/app/shared/services/storage/storage.service.ts");
-var AddOperatorsComponent_1;
+/* harmony import */ var _angular_fire_storage__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/fire/storage */ "./node_modules/@angular/fire/storage/es2015/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _shared_services_toast_service__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../../../shared/services/toast.service */ "./src/app/shared/services/toast.service.ts");
 
 
 
@@ -429,16 +395,26 @@ var AddOperatorsComponent_1;
 
 
 
-let AddOperatorsComponent = AddOperatorsComponent_1 = class AddOperatorsComponent {
-    constructor(defaults, dialogRef, fb, firestore, storageService, operatorService) {
+
+
+
+let AddOperatorsComponent = class AddOperatorsComponent {
+    constructor(defaults, dialogRef, fb, firestore, storageService, operatorService, storage, http, toastService) {
         this.defaults = defaults;
         this.dialogRef = dialogRef;
         this.fb = fb;
         this.firestore = firestore;
         this.storageService = storageService;
         this.operatorService = operatorService;
+        this.storage = storage;
+        this.http = http;
+        this.toastService = toastService;
         this.addOperators = new _shared_models_operators__WEBPACK_IMPORTED_MODULE_15__["Operators"]();
         this.loading = false;
+        this.archivoForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
+            archivo: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+        });
+        this.titl = 'ng-bootstrap-demo';
         this.mode = 'create';
         this.icMoreVert = _iconify_icons_ic_twotone_more_vert__WEBPACK_IMPORTED_MODULE_4___default.a;
         this.icClose = _iconify_icons_ic_twotone_close__WEBPACK_IMPORTED_MODULE_5___default.a;
@@ -450,6 +426,8 @@ let AddOperatorsComponent = AddOperatorsComponent_1 = class AddOperatorsComponen
         this.icLocationCity = _iconify_icons_ic_twotone_location_city__WEBPACK_IMPORTED_MODULE_12___default.a;
         this.icEditLocation = _iconify_icons_ic_twotone_edit_location__WEBPACK_IMPORTED_MODULE_13___default.a;
         this.icPhone = _iconify_icons_ic_twotone_phone__WEBPACK_IMPORTED_MODULE_9___default.a;
+        /*=====================submit image and download url image========================*/
+        this.downloadableURL = "";
     }
     ngOnInit() {
         if (this.storageService.getSession("$key") != null) {
@@ -463,60 +441,121 @@ let AddOperatorsComponent = AddOperatorsComponent_1 = class AddOperatorsComponen
         }
         const newId = this.firestore.createId();
         this.storageService.setSession("mykey", newId);
+        this.createForm();
+        /*this.form = this.fb.group({
+          $key: newId,
+          id: [AddOperatorsComponent.id++],
+          apellidos: [this.defaults.apellidos || ''],
+          codigoPostal: [this.defaults.codigoPostal || ''],
+          correo: [this.defaults.correo || ''],
+          curp: [this.defaults.curp || ''],
+          estado: [this.defaults.estado || ''],
+          fechaNacimiento: [this.defaults.fechaNacimiento || ''],
+          localidad: [this.defaults.localidad || ''],
+          municipio: [this.defaults.municipio || ''],
+          nombre: [this.defaults.nombre || ''],
+          telefono: [this.defaults.telefono || '']
+    
+        });*/
+    }
+    get f() { return this.form.controls; }
+    createForm() {
         this.form = this.fb.group({
-            $key: newId,
-            id: [AddOperatorsComponent_1.id++],
-            apellidos: [this.defaults.apellidos || ''],
-            codigoPostal: [this.defaults.codigoPostal || ''],
-            correo: [this.defaults.correo || ''],
-            curp: [this.defaults.curp || ''],
-            estado: [this.defaults.estado || ''],
-            fechaNacimiento: [this.defaults.fechaNacimiento || ''],
-            localidad: [this.defaults.localidad || ''],
-            municipio: [this.defaults.municipio || ''],
-            nombre: [this.defaults.nombre || ''],
-            telefono: [this.defaults.telefono || '']
+            apellidos: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            estado: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            localidad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            municipio: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            nombre: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            //operadorFoto: ['', Validators.required],
+            licencia: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            tipoLicencia: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            ine: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
         });
     }
-    save(clientForm) {
-        if (this.mode === 'create') {
-            this.addClient(clientForm);
+    /*=====================generate random name=======================================*/
+    generateName() {
+        try {
+            var myDate = new Date();
+            var varID = myDate.getFullYear() + "" + myDate.getMonth() + "" + myDate.getDay() + "" + myDate.getHours() + "" + myDate.getMinutes() + "" + myDate.getSeconds();
+            if (varID.length > 15) {
+                varID = varID.substr(0, 15);
+            }
+            return varID;
         }
-        else if (this.mode === 'update') {
-            this.updateCustomers();
+        catch (e) {
+            console.log("error!!!" + e.message);
         }
     }
-    addClient(clientForm) {
-        this.operatorService.postOperators(clientForm.value);
-        this.createCustomer();
-        alert("cliente guardado");
+    onUpload(e) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            //console.log('subir', e.target.files[0]
+            const id = Math.random().toString(36).substring(2);
+            const file = e.target.files[0];
+            const filepath = 'operadores/' + this.generateName();
+            const ref = this.storage.ref(filepath);
+            const task = this.storage.upload(filepath, file);
+            this.uploafPercent = task.percentageChanges();
+            //task.snapshotChanges().pipe(finalize(() => this.urlImage = ref.getDownloadURL())).subscribe();
+            (yield task).ref.getDownloadURL().then(url => {
+                this.downloadableURL = url;
+                console.log('print url: ' + this.downloadableURL);
+            });
+            //this.storageService.setSession('myimg', filepath)
+        });
+    }
+    addClient(value) {
+        if (this.form.invalid) {
+            this.toastService.show('Campos requeridos', {
+                classname: 'bg-danger text-light',
+                delay: 2000,
+                autohide: true,
+                headertext: 'ERROR'
+            });
+        }
+        else {
+            this.operatorService.postOperators(value, this.myurlimage.nativeElement.value);
+            this.createCustomer();
+            this.toastService.show('Se ha guardado con exito una nueva unidad', {
+                classname: 'bg-success text-light',
+                delay: 3000,
+                autohide: true,
+                headertext: 'REGISTRO EXITOSO'
+            });
+        }
     }
     updateCustomers() {
         if (this.storageService.getSession("$key") != null) {
             //var value = new AddEstablishment
             var values = {
                 apellidos: this.addOperators.apellidos,
-                codigoPostal: this.addOperators.codigoPostal,
-                correo: this.addOperators.correo,
-                curp: this.addOperators.curp,
+                // codigoPostal: this.addOperators.codigoPostal,
+                // correo: this.addOperators.correo,
+                // curp: this.addOperators.curp,
                 estado: this.addOperators.estado,
-                fechaNacimiento: this.addOperators.fechaNacimiento,
+                //fechaNacimiento: this.addOperators.fechaNacimiento,
                 localidad: this.addOperators.localidad,
                 municipio: this.addOperators.municipio,
                 nombre: this.addOperators.nombre,
-                telefono: this.addOperators.telefono
+                operadorFoto: this.addOperators.operadorFoto,
+                licencia: this.addOperators.licencia,
+                tipoLicencia: this.addOperators.tipoLicencia,
+                ine: this.addOperators.ine
             };
             const customer = this.form.value;
             customer.apellidos = String(values.apellidos);
-            customer.codigoPostal = Number(values.codigoPostal);
-            customer.correo = String(values.correo);
-            customer.curp = String(values.curp);
+            // customer.codigoPostal = Number(values.codigoPostal)
+            // customer.correo = String(values.correo)
+            // customer.curp = String(values.curp)
             customer.estado = Number(values.estado);
-            customer.fechaNacimiento = String(values.fechaNacimiento);
+            //customer.fechaNacimiento= String(values.fechaNacimiento)
             customer.localidad = Number(values.localidad);
             customer.municipio = Number(values.municipio);
             customer.nombre = Number(values.nombre);
-            customer.telefono = Number(values.telefono);
+            //customer.telefono = Number(values.telefono)
+            customer.operadorFoto = String(values.operadorFoto);
+            customer.licencia = String(values.licencia);
+            customer.tipoLicencia = String(values.tipoLicencia);
+            customer.ine = String(values.ine);
             this.operatorService.updateOperators(values);
             this.updateCustomer();
             console.log('print value::' + JSON.stringify(customer));
@@ -525,10 +564,18 @@ let AddOperatorsComponent = AddOperatorsComponent_1 = class AddOperatorsComponen
             console.log('no entro');
         }
     }
+    save(value) {
+        if (this.mode === 'create') {
+            this.addClient(value);
+        }
+        else if (this.mode === 'update') {
+            this.updateCustomers();
+        }
+    }
     createCustomer() {
         const customer = this.form.value;
         if (!customer.imageSrc) {
-            customer.imageSrc = 'assets/img/avatars/1.jpg';
+            customer.imageSrc = this.myurlimage.nativeElement.value;
         }
         this.dialogRef.close(customer);
     }
@@ -551,9 +598,15 @@ AddOperatorsComponent.ctorParameters = () => [
     { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
     { type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_16__["AngularFirestore"] },
     { type: _shared_services_storage_storage_service__WEBPACK_IMPORTED_MODULE_17__["StorageService"] },
-    { type: _shared_services_operators_services__WEBPACK_IMPORTED_MODULE_14__["OperatorsService"] }
+    { type: _shared_services_operators_services__WEBPACK_IMPORTED_MODULE_14__["OperatorsService"] },
+    { type: _angular_fire_storage__WEBPACK_IMPORTED_MODULE_18__["AngularFireStorage"] },
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["HttpClient"] },
+    { type: _shared_services_toast_service__WEBPACK_IMPORTED_MODULE_20__["ToastService"] }
 ];
-AddOperatorsComponent = AddOperatorsComponent_1 = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('urlimage', { static: true })
+], AddOperatorsComponent.prototype, "myurlimage", void 0);
+AddOperatorsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'vex-add-operators',
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./add-operators.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/apps/operators/add-operators/add-operators.component.html")).default,
@@ -770,13 +823,17 @@ let OperatorsComponent = class OperatorsComponent {
         this.operatorService = operatorService;
         this.storageService = storageService;
         this.displayedColumns = [
+            'operadorFoto',
             'nombre',
             'apellidos',
-            'curp',
-            'fechaNacimiento',
-            'correo',
-            'telefono',
-            'codigoPostal',
+            'licencia',
+            'tipoLicencia',
+            'ine',
+            // 'curp',
+            // 'fechaNacimiento',
+            // 'correo',
+            // 'telefono',
+            // 'codigoPostal',
             'localidad',
             'municipio',
             'estado',

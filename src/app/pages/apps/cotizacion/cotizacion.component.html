@@ -49,10 +49,7 @@
              fxLayout="row"
              fxLayoutAlign="start center">
           <ic-icon [icIcon]="icSearch" size="20px"></ic-icon>
-          <input [formControl]="searchCtrl"
-                 class="px-4 py-3 border-0 outline-none w-full bg-transparent"
-                 placeholder="Buscar..."
-                 type="search">
+          <input [formControl]="searchCtrl" class="px-4 py-3 border-0 outline-none w-full bg-transparent" placeholder="Buscar..." type="search">
         </div>
 
         <span fxFlex></span>
@@ -82,7 +79,7 @@
       </div>
 
       <div class="example-container mat-elevation-z8">
-        <mat-table #table [dataSource]="dataSource">
+        <mat-table #table [dataSource]="dataSource" >
       
           <!--- Note that these columns can be defined in any order.
                 The actual rendered columns are set as a property on the row definition" -->

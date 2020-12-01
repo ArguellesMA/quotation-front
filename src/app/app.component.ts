@@ -689,13 +689,13 @@ export class AppComponent {
             route: '/apps/cotizacion'
 
           },
-          {
-            type: 'link',
-            label: 'operadores',
-            icon: icReceipt,
-            route: '/apps/operators'
+          // {
+          //   type: 'link',
+          //   label: 'operadores',
+          //   icon: icReceipt,
+          //   route: '/apps/operators'
 
-          },
+          // },
           /*,
           {
             type: 'dropdown',

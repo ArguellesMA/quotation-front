@@ -26,6 +26,7 @@ import { AddCotizacionModule } from './add-cotizacion/add-cotizacion.module'
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
+import { MatFormFieldModule, MatInputModule } from '@angular/material';
 
 @NgModule({
   declarations: [CotizacionComponent],
@@ -53,7 +54,9 @@ import { faCircle } from '@fortawesome/free-solid-svg-icons'
     MatButtonToggleModule,
     AddCotizacionModule,
     MatDatepickerModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 export class CotizacionModule {

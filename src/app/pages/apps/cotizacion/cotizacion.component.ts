@@ -41,6 +41,7 @@ import { colors } from 'src/static-data/colors';
 import { style } from '@angular/animations';
 import Color from 'color';
 
+
 @Component({
   selector: 'vex-cotizacion',
   templateUrl: './cotizacion.component.html',
@@ -81,8 +82,8 @@ export class CotizacionComponent implements OnInit {
     
   ];
 
-  dataSource: any = new CustomerDataSource(this.cotizacionService);
-  //dataSource:any = new EstablishmentDataSource(this.establishmentService);
+  dataSource = new MatTableDataSource<Cotizacion>();//this is other option for get services and fill table
+  //dataSource: any = new CustomerDataSource(this.cotizacionService);//option call service and fill table
 
   element
 
@@ -109,6 +110,7 @@ export class CotizacionComponent implements OnInit {
   icMoreHoriz = icMoreHoriz;
   icFolder = icFolder;
 
+  
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   //clientService: any;
@@ -121,14 +123,15 @@ export class CotizacionComponent implements OnInit {
     library.add(faCircle);
   }
 
+  // get visibleColumns() {
+  //   return this.displayedColumns.filter(displayedColumns => displayedColumns.visible).map(displayedColumns => displayedColumns.property);
+  // }
+
     vencidos = 0;
     porVencer = 0;
     aTiempo = 0;
 
   ngOnInit() {
-    var mydata = [];
-    
-
     this.dataSource.connect().subscribe(customers => {
       this.subject$.next(JSON.parse(JSON.stringify(customers)));
       
@@ -140,18 +143,20 @@ export class CotizacionComponent implements OnInit {
   
       });
 
-
     });
     this.data$.pipe(
       filter<Cotizacion[]>(Boolean)
     ).subscribe(customers => {
       this.customers = customers;
-      this.dataSource.connect().toPromise = customers;
+      this.dataSource.data = customers;
+        // this.dataSource.connect().toPromise = customers;
     });
 
     this.searchCtrl.valueChanges.pipe(
       untilDestroyed(this)
     ).subscribe(value => this.onFilterChange(value));
+  
+  
   }
 
   switch(p) {
@@ -161,15 +166,12 @@ export class CotizacionComponent implements OnInit {
 }
 
   ngAfterViewInit() {
-    //this.dataSours.paginator = this.paginator;
-// this.dataSours.sort = this.sort;
-  //this.spinnerService.show();
-}
-
-applyFilter(filterValue: string) {
-filterValue = filterValue.trim(); // Remove whitespace
-filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
-//this.dataSource.filter = filterValue;
+    this.cotizacionService.getAllCotizacion().subscribe(data => {
+      this.dataSource.data = data;
+      console.log(this.dataSource.data);
+    });
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
 }
 
 createCustomer() {
@@ -216,8 +218,10 @@ removeAt(i){
 
 onFilterChange(value: string) {
   if (!this.dataSource) {
+    console.log("entro condicion filter")
     return;
   }
+  console.log("entro a filter")
   value = value.trim();
   value = value.toLowerCase();
   this.dataSource.filter = value;
@@ -252,18 +256,18 @@ ngOnDestroy() {
 
 }
 
-export class CustomerDataSource extends DataSource<any> {
+// export class CustomerDataSource extends DataSource<any> {
 
-  operatorsList: Cotizacion[];
-  operatorsObj: Cotizacion;
+//   operatorsList: Cotizacion[];
+//   operatorsObj: Cotizacion;
 
-  constructor(private cotizacionService: CotizacionService) {
-  super()
-  }
+//   constructor(private cotizacionService: CotizacionService) {
+//   super()
+//   }
 
-  connect() {
-    return this.cotizacionService.getAllCotizacion() 
-  }
+//   connect() {
+//     return this.cotizacionService.getAllCotizacion() 
+//   }
 
-  disconnect() {}
-}
+//   disconnect() {}
+// }
