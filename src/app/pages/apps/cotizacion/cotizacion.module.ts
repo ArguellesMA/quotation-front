@@ -22,8 +22,6 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { CotizacionComponent } from './cotizacion.component';
 import { CotizacionRoutingModule } from './cotizacion-routing.module';
 import { AddCotizacionModule } from './add-cotizacion/add-cotizacion.module'
-//import { AlmacenCreateUpdateModule } from './almacen-create-update/almacen-create-update.module';
-import {MatDatepickerModule} from '@angular/material/datepicker';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
@@ -36,7 +34,6 @@ import { MatFormFieldModule, MatInputModule } from '@angular/material';
     PageLayoutModule,
     FlexLayoutModule,
     BreadcrumbsModule,
-    //AlmacenCreateUpdateModule,
     MatPaginatorModule,
     MatTableModule,
     MatSortModule,
@@ -53,10 +50,9 @@ import { MatFormFieldModule, MatInputModule } from '@angular/material';
     ColorFadeModule,
     MatButtonToggleModule,
     AddCotizacionModule,
-    MatDatepickerModule,
     FontAwesomeModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
   ]
 })
 export class CotizacionModule {

@@ -13,6 +13,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { IconModule } from '@visurel/iconify-angular';
 import { MatDividerModule } from '@angular/material/divider';
 import { FormsModule } from '@angular/forms';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   imports: [
@@ -29,6 +31,9 @@ import { FormsModule } from '@angular/forms';
     IconModule,
     MatDividerModule,
     FormsModule,
+    MatNativeDateModule,
+    MatDatepickerModule
+
   ],
   declarations: [AddCotizacionComponent],
   entryComponents: [AddCotizacionComponent],

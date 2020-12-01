@@ -57,26 +57,26 @@
   
           <!--<mat-icon [icIcon]="icMyLocation" class="mr-3" matPrefix></mat-icon>-->
         </mat-form-field>
-  
+
         <mat-form-field class="sm:ml-6 flex-auto">
           <mat-label>Fecha de pago</mat-label>
-          <!--<input formControlName="dia" matInput>-->
-          <input  formControlName="fechaPago" type="text" class="form-control" id="fechaPago" name="fechaPago" [(ngModel)]="addCotizacion.fechaPago" matInput>
-  
-          <!--<mat-icon [icIcon]="icPerson" class="mr-3" matPrefix></mat-icon>-->
+          <input matInput formControlName="fechaPago" type="text" class="form-control" id="fechaPago" name="fechaPago" [(ngModel)]="addCotizacion.fechaPago" ng-pattern="/\d\d/\d\d/\d\d\d\d/" [matDatepicker]="picker" placeholder="Choose a date">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker touchUi #picker></mat-datepicker>
         </mat-form-field>
+
       </div>
 
-      <mat-form-field>
+      <!-- <mat-form-field>
         <mat-label>Estatus</mat-label>
-        <mat-select  class="custon-select form-control" name="selectedValue" id="selectedValue"  [(ngModel)]="selectedValue" (change)="selectmyEstatus()"
+        <mat-select  class="custon-select form-control" name="selectedValue" id="selectedValue"  [(ngModel)]="selectedValue"
         formControlName="estatus" [ngClass]="{ 'is-invalid': submitted && f.estatus.errors }">
           <mat-option *ngFor="let type of status" [value]="type.value">{{type.viewValue}}</mat-option>
         </mat-select>
         <div *ngIf="submitted && f.estatus.errors" class="invalid-feedback">
           <div *ngIf="f.estatus.errors.required">estatus es requerido</div>
       </div>
-      </mat-form-field>
+      </mat-form-field> -->
 
     </mat-dialog-content>
   

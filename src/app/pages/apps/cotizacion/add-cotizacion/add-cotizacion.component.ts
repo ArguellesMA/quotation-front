@@ -21,15 +21,15 @@ import { Estatus } from '../../../../shared/models/cotizacion/estatus';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { firestore } from 'firebase';
 import { StorageService } from '../../../../shared/services/storage/storage.service';
-
 import { AngularFireStorage } from "@angular/fire/storage";
 import { map, finalize } from "rxjs/operators";
 import { Observable } from "rxjs";
-
 import { HttpEventType, HttpClient } from "@angular/common/http";
 import { ToastService } from '../../../../shared/services/toast.service';
-
 import {NgOption} from "@ng-select/ng-select";
+import { DatePipe } from '@angular/common'
+
+import * as moment from 'moment'
 
 export interface Status {
   value: number;
@@ -41,6 +41,7 @@ export interface Status {
   templateUrl: './add-cotizacion.component.html',
   styleUrls: ['./add-cotizacion.component.scss'],
   encapsulation: ViewEncapsulation.None,
+  providers:[DatePipe]
 })
 export class AddCotizacionComponent implements OnInit {
 
@@ -92,6 +93,11 @@ status: Status[] = [
   icPhone = icPhone;
   client: any;
 
+  todayNumber: number = Date.now();
+  todayDate : Date = new Date();
+  todayString : string = new Date().toDateString();
+  todayISOString : string = new Date().toISOString();
+
 
   constructor(
     @Inject(MAT_DIALOG_DATA) 
@@ -103,7 +109,8 @@ status: Status[] = [
     private cotizacionService: CotizacionService,
     private storage: AngularFireStorage,
     private http: HttpClient,
-    public toastService: ToastService
+    public toastService: ToastService,
+    public datepipe: DatePipe
   ) { }
 
   ngOnInit() {
@@ -121,6 +128,9 @@ status: Status[] = [
     this.storageService.setSession("mykey", newId)
 
     this.createForm()
+    this.myFunction()
+
+
   }
 
   get f() { return this.form.controls; }
@@ -131,20 +141,39 @@ status: Status[] = [
       folioFactura: ['', Validators.required],
       cliente: ['', Validators.required],
       importe: ['', Validators.required],
-      fechaPago: ['', Validators.required],
-      estatus: [undefined, Validators.required]
+      fechaPago: ['', Validators.required]
+      //estatus: [undefined, Validators.required]
     });
   }
 
-  selectmyEstatus(){
-    alert(this.selectedValue)
-    var myestatus =new  Estatus;
-    myestatus.id = this.selectedValue;
-  }
+  date
+  myFunction(){
+    this.date=new Date();
+    console.log("date"+ this.date)
+    let latest_date =this.datepipe.transform(this.date, 'dd/MM/yyyy');
+    console.log("my day "+ latest_date)
+   }
+
+   
 
   addClient(value) {
-    var mycotizacion: Cotizacion;
-    var myestatus: Estatus;
+    this.date=new Date();
+  
+    // var rojo = new Date();
+    // var naranja = new Date();
+    // var verde = new Date();
+
+
+
+    // rojo.setDate(rojo.getDate() - 5);
+    // let vencidos =this.datepipe.transform(rojo, 'dd/MM/yyyy');
+
+    // naranja.setDate(naranja.getDate() + 5, );
+    // let porVencer =this.datepipe.transform(naranja, 'dd/MM/yyyy');
+
+    // verde.setDate(verde.getDate() + 6);
+    // let aTiempo =this.datepipe.transform(verde, 'dd/MM/yyyy');
+
 
     if(this.form.invalid){
 
@@ -156,11 +185,33 @@ status: Status[] = [
       });
 
     }else{
+      let latest_date =this.datepipe.transform(value.fechaPago, 'dd/MM/yyyy');
 
+      let vencidos =this.datepipe.transform(this.date, 'dd/MM/yyyy');
+      console.log("my day "+ vencidos)
 
-    //  myestatus.id = this.selectedValue;
-    //  mycotizacion.estatus = myestatus;
+      var vencidos1 = moment(latest_date);
+      var vencidos2 = moment(vencidos);
 
+      var admission = moment(latest_date, 'DD/MM/YYYY'); 
+      var discharge = moment(vencidos, 'DD/MM/YYYY');
+      var dif = discharge.diff(admission, 'days')
+      console.log(dif)
+
+      
+      if(dif >= 0){
+        console.log("entro a vencidos")
+          value.estatus = 1
+      }else if(dif >= -5) {
+          console.log("entro por vencer")
+          value.estatus = 2
+    
+      }else if(dif <= -6){
+        console.log("entro a tiempo")
+          value.estatus = 3
+      }
+      
+      value.fechaPago = latest_date
 
     this.cotizacionService.postCotizacion(value);
     this.createCustomer();

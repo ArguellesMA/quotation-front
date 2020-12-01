@@ -48,6 +48,7 @@
     "luxon": "^1.16.1",
     "mapbox-gl": "^1.10.1",
     "module": "^1.2.5",
+    "moment": "^2.29.1",
     "ngx-quill": "^7.3.6",
     "ngx-showdown": "^5.0.0",
     "ngx-take-until-destroy": "^5.4.0",
