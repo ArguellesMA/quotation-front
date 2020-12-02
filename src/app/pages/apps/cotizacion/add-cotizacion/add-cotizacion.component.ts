@@ -159,22 +159,6 @@ status: Status[] = [
   addClient(value) {
     this.date=new Date();
   
-    // var rojo = new Date();
-    // var naranja = new Date();
-    // var verde = new Date();
-
-
-
-    // rojo.setDate(rojo.getDate() - 5);
-    // let vencidos =this.datepipe.transform(rojo, 'dd/MM/yyyy');
-
-    // naranja.setDate(naranja.getDate() + 5, );
-    // let porVencer =this.datepipe.transform(naranja, 'dd/MM/yyyy');
-
-    // verde.setDate(verde.getDate() + 6);
-    // let aTiempo =this.datepipe.transform(verde, 'dd/MM/yyyy');
-
-
     if(this.form.invalid){
 
       this.toastService.show('Campos requeridos', {
@@ -189,9 +173,6 @@ status: Status[] = [
 
       let vencidos =this.datepipe.transform(this.date, 'dd/MM/yyyy');
       console.log("my day "+ vencidos)
-
-      var vencidos1 = moment(latest_date);
-      var vencidos2 = moment(vencidos);
 
       var admission = moment(latest_date, 'DD/MM/YYYY'); 
       var discharge = moment(vencidos, 'DD/MM/YYYY');

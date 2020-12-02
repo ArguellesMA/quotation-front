@@ -40,7 +40,8 @@ import { faCircle } from '@fortawesome/free-solid-svg-icons'
 import { colors } from 'src/static-data/colors';
 import { style } from '@angular/animations';
 import Color from 'color';
-
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 
 @Component({
   selector: 'vex-cotizacion',
@@ -166,9 +167,25 @@ export class CotizacionComponent implements OnInit {
 }
 
   ngAfterViewInit() {
+
     this.cotizacionService.getAllCotizacion().subscribe(data => {
       this.dataSource.data = data;
-      console.log(this.dataSource.data);
+
+      this.dataSource.data.forEach(node =>  {
+
+      if(node.estatus === 1){
+        console.log("entro alerta")
+        Swal.fire({
+          icon: 'warning',
+          title: 'Cotizaciones vencidas',
+          showConfirmButton: false,
+          timer: 2000
+        })
+
+      }
+
+      });
+
     });
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;

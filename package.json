@@ -59,6 +59,7 @@
     "rxjs-compat": "^6.5.4",
     "showdown": "^1.9.0",
     "simplebar": "~4.2.3",
+    "sweetalert2": "^10.10.4",
     "tailwindcss": "^1.1.2",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
